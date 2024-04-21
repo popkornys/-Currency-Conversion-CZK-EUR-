@@ -20,7 +20,6 @@ def calculate():
         result = float(user_input.get()) / 22.05
         calculated_value["text"] = round(result, 2)
         user_input.delete(0, END)
-        # user_input.delete(0, END)  # Vymazání obsahu vstupu uživatele
         warning_label = Label(text="", font=("Cambria", 10, "bold"), bg="#061856", foreground="red")
         warning_label.grid(row=3, column=0, columnspan=3, padx=10, pady=1, sticky=W + E)
 
@@ -39,13 +38,10 @@ euro_label.grid(row=1, column=1, padx=10, pady=10)
 
 # label
 currency = Label(text="CZK", font=("Cambria", 10), bg="#061856", foreground="white")
-# currency.pack(pady=50)  # Přidání do okna, expand si zabaere veškeré moné místo
-# currency.place(x=250, y=100)  # Velmi specifické přidní pomocí souřadnic
 currency.grid(row=0, column=1, padx=10, pady=1)
 
 # Tlačítko
 Calculate_Btn = Button(text="Calculate", font=("Cambria", 10, "bold"), command=calculate)
-# Calculate_Btn.pack()
 Calculate_Btn.grid(row=0, column=3, padx=10, pady=10)
 
 # hlavní cyklus
